@@ -3,7 +3,8 @@ task :update_rates => :environment do
   puts "Updating rates..."
   
 	rand = Random.new
-
+	
+	Rate.delete_all
 	currencies = Currency.all
 
 	currencies.each do |currency_from|
